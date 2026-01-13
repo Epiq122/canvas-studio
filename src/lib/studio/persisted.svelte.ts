@@ -1,8 +1,6 @@
-/*! 🌼 daisyUI 5.5.14 */
-/*! 🌼 daisyUI 5.5.14 */
 import { createSubscriber } from 'svelte/reactivity';
 
-export function createPerstistedState<T>(key: string, initial: T) {
+export function createPersistedState<T>(key: string, initial: T) {
 	function load(): T {
 		if (typeof window === 'undefined') return initial;
 
