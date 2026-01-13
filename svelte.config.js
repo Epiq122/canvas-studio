@@ -1,3 +1,5 @@
+/*! 🌼 daisyUI 5.5.14 */
+/*! 🌼 daisyUI 5.5.14 */
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
