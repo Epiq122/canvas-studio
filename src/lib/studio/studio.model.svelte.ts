@@ -9,7 +9,7 @@ export function createStudioModel() {
 			title: 'Die Hard',
 			year: 1988,
 			rating: 5,
-			status: 'watched',
+			status: 'watching',
 			tags: ['action', 'thriller'],
 			notes: 'Tense and endlessly rewatchable',
 			createdAt: Date.now() - 86400000,
@@ -20,7 +20,7 @@ export function createStudioModel() {
 			title: 'Back to the Future',
 			year: 1985,
 			rating: 5,
-			status: 'watched',
+			status: 'queue',
 			tags: ['sci-fi', 'adventure', 'comedy'],
 			notes: 'Perfect time-travel adventure',
 			createdAt: Date.now() - 172800000,
@@ -163,8 +163,12 @@ export function createStudioModel() {
 	return {
 		movies: {
 			all: () => movies,
-			filtered: filteredMovies,
-			stats
+			get filtered() {
+				return filteredMovies;
+			},
+			get stats() {
+				return stats;
+			}
 		},
 		activities,
 		prefs,
